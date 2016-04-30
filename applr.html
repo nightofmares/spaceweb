@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>testing with ppt and boot strap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<style type="text/css">
+    /* Some custom styles to beautify this example */
+    .demo-content{
+        padding: 15px;
+        font-size: 18px;
+        min-height: 700px;
+        background: #dbdfe5;
+        margin-bottom: 10px;
+    }
+    html { 
+  background: url(http://azuretwilight.org/images/themes/azure_twilight/background_space_purple.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+    </style>
+    </head>
+    <body>
+        
+        
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+var slideShow = function(container) {
+    this.images = [];
+    this.curImage = 0;
+    for (i = 0; i < container.childElementCount; i++) {
+        this.images.push(container.children[i]);
+        this.images[i].style.display = "none";
+    }
+    
+    // Handle going to to the next slide
+    var nextSlide = function() {
+        for (var i = 0; i < this.images.length; i++) {
+            this.images[i].style.display = "none";
+        }
+        this.images[this.curImage].style.display = "block";
+        this.curImage++;
+        if (this.curImage >= this.images.length) {
+            this.curImage = 0;
+        }
+        window.setTimeout(nextSlide.bind(this), 5000);
+    };
+    
+    nextSlide.call(this);
+};
+slideShow(document.getElementById("slideshow"));
+    </script>
+</body>
+</html>
