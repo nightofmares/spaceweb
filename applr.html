@@ -37,36 +37,12 @@ div {
     </style>
     </head>
     <body>
-        <div><h1 align="center" style"color:white;">Let's go into space.</h1></div>
-        
+        <div><h1 align="center" style="color:white;">Travel into space.</h1><br><button id="button" align="center">Let's Go</button></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script>
-var slideShow = function(container) {
-    this.images = [];
-    this.curImage = 0;
-    for (i = 0; i < container.childElementCount; i++) {
-        this.images.push(container.children[i]);
-        this.images[i].style.display = "none";
-    }
-    
-    // Handle going to to the next slide
-    var nextSlide = function() {
-        for (var i = 0; i < this.images.length; i++) {
-            this.images[i].style.display = "none";
-        }
-        this.images[this.curImage].style.display = "block";
-        this.curImage++;
-        if (this.curImage >= this.images.length) {
-            this.curImage = 0;
-        }
-        window.setTimeout(nextSlide.bind(this), 5000);
-    };
-    
-    nextSlide.call(this);
-};
-slideShow(document.getElementById("slideshow"));
+
     </script>
 </body>
 </html>
